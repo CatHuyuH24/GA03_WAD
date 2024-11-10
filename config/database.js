@@ -5,6 +5,7 @@ let pool;
 
 if (process.env.NODE_ENV === "PROD") {
     console.log("Using Production Pool from database.js");
+    console.log("DB_CONNECTION_STRING from database.js: ", process.env.DB_CONNECTION_STRING);
     
     // Production Pool
     pool = new Pool({
@@ -16,6 +17,8 @@ if (process.env.NODE_ENV === "PROD") {
         idleTimeoutMillis: parseInt(process.env.DB_IDLE_TIMEOUT_MILLIS),
     });
 } else {
+    console.log("Using Development Pool from database.js");
+    
     // Development Pool
     pool = new Pool({
         host: process.env.DB_HOST,

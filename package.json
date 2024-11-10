@@ -2,7 +2,7 @@
 	"name": "wad_ga03",
 	"version": "1.0.0",
 	"description": "**HCMUS-WAD-GA03**",
-	"main": "index.ejs",
+	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"create-db": "node createDatabase.js",

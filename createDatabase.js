@@ -5,6 +5,9 @@ async function createDatabase() {
 	let client;
 	if(process.env.NODE_ENV === "PROD")
 	{
+		console.log("Using Production Pool from createDatabase.js");
+		console.log("DB_CONNECTION_STRING from createDB: ", process.env.DB_CONNECTION_STRING);
+		
 		//production
 		client = new Client({
 			connectionString: process.env.DB_CONNECTION_STRING,
